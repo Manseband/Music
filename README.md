@@ -1,2 +1,2 @@
 # Music
-Web scraping and tagging utilities
+Web scraping and some tagging utilities.
