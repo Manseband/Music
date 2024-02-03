@@ -1,2 +1,3 @@
 # Music
-Web scraping and some tagging utilities.
+Bandcamp scraping app along with some tagging utilities.\
+The scraper should work forever until Bandcamp refactors their website.
