@@ -22,8 +22,10 @@ def setTags(directory, date, genre):
         tags.add(TPE1(encoding=3, text=artist))
         tags.add(TPE2(encoding=3, text=artist))
         tags.add(TRCK(encoding=3, text=str(tracknumber)))
-        tags.add(TDRC(encoding=3, text=date))
-        tags.add(TCON(encoding=3, text=genre))
+        if (date != ""):
+            tags.add(TDRC(encoding=3, text=date))
+        if (genre != ""):
+            tags.add(TCON(encoding=3, text=genre))
         tags.setall('COMM', []) # Remove comments
         tags.save()
 
@@ -47,7 +49,7 @@ while (0 != 1):
     DIRECTORY = input("Path Of Album From Here: ")
     # resetTags(DIRECTORY)
 
-    DATE = input("Date Published: ")
-    GENRE = input("Genre: ")
+    DATE = input("Date Published (Leave blank to skip): ")
+    GENRE = input("Genre (Leave blank to skip): ")
     setTags(DIRECTORY, DATE, GENRE)
     print("")
